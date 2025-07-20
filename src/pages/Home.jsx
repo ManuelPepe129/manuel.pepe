@@ -1,4 +1,3 @@
-import ProjectTable from "../Components/ProjectTable.jsx";
 import {ThemeToggle} from "@/Components/ThemeToggle.jsx";
 import {StarBackground} from "@/Components/StarBackground.jsx";
 import {Navbar} from "@/Components/Navbar.jsx";
