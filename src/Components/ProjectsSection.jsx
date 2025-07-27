@@ -1,6 +1,5 @@
-import {ArrowRight, ExternalLink, Github} from "lucide-react";
+import {ArrowRight} from "lucide-react";
 import {useState} from "react";
-import {cn} from "@/lib/utils.js";
 import ProjectComponent from "@/Components/ProjectComponent.jsx";
 
 
