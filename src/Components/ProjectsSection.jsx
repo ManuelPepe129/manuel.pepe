@@ -1,4 +1,7 @@
 import {ArrowRight, ExternalLink, Github} from "lucide-react";
+import {useState} from "react";
+import {cn} from "@/lib/utils.js";
+
 
 export const ProjectsSection = () => {
     const projects = [
@@ -10,13 +13,21 @@ export const ProjectsSection = () => {
             url: "https://youtu.be/FEu00vo4Iic"
         },
         {
-            title: "Memorie di Mariette: Viaggio nel tempio di Hathor",
+            title: "Memorie di Mariette",
             description: "Virtual Reality Escape Room born from a collaboration between Politecnico di Torino, Robin Studio, and the Egyptian Museum within the context of the exhibition \"Aida - Figlia di Due Mondi.”",
             image: "/projects/aida_museo_egizio.jpg",
-            tags: ["Unity"],
+            tags: ["Unity", "VR"],
             url: "https://archivio-poliflash.polito.it/in_ateneo/la_realta_virtuale_del_politecnico_al_museo_egizio_per_la_mostra_sull_aida"
         },
     ];
+
+    const [textExpanded, setTextExpanded] = useState(false);
+
+    const OnReadMoreButtonCLicked = () => {
+        console.log("clicked")
+        setTextExpanded(!textExpanded);
+    }
+
     return (
         <section id="projects" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl">
@@ -45,7 +56,12 @@ export const ProjectsSection = () => {
                                     )}
                                 </div>
                                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-2">{project.description}</p>
+                                <p className={cn("text-muted-foreground text-sm mb-2  overflow-hidden", textExpanded ? "h-30" : "h-20")}>{project.description}</p>
+                                <div className="flex justify-between items-center">
+                                    <div className="flex space-x-3">
+                                        <button className="p-2 text-primary z-50 cursor-pointer " onClick={OnReadMoreButtonCLicked}>{ textExpanded ? "Read less" : "Read more..."}</button>
+                                    </div>
+                                </div>
                                 <div className="flex justify-between items-center">
                                     <div className="flex space-x-3">
                                         <a
@@ -55,15 +71,6 @@ export const ProjectsSection = () => {
                                         >
                                             <ExternalLink size={20}/>
                                         </a>
-                                        {project.gitHub ?
-                                            <a
-                                                href={project.gitHub}
-                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                                target="_blank"
-                                            >
-                                                <Github size={20}/>
-                                            </a> :
-                                            <></>}
                                     </div>
                                 </div>
                             </div>
