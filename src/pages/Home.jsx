@@ -25,10 +25,10 @@ export default function Home() {
             {/* Main Content */}
             <main>
                 <HeroSection/>
-                <AboutSection/>
+                {/*<AboutSection/>*/}
                 <SkillsSection/>
                 <ProjectsSection/>
-                <ContactSection/>
+                {/*<ContactSection/>*/}
             </main>
 
             {/* Footer */ }
