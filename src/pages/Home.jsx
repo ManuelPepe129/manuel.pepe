@@ -7,6 +7,8 @@ import {SkillsSection} from "@/Components/SkillsSection.jsx";
 import {ProjectsSection} from "@/Components/ProjectsSection.jsx";
 import {ContactSection} from "@/Components/ContactSection.jsx";
 import {FooterComponent} from "@/Components/Footer.jsx";
+import {PersonalProjectsSection} from "@/Components/PersonalProjectsSection.jsx";
+import {EducationSection} from "@/Components/EducationSection.jsx";
 
 
 export default function Home() {
@@ -26,8 +28,10 @@ export default function Home() {
             <main>
                 <HeroSection/>
                 {/*<AboutSection/>*/}
-                <SkillsSection/>
+                {/*<SkillsSection/>*/}
                 <ProjectsSection/>
+                <PersonalProjectsSection/>
+                <EducationSection/>
                 {/*<ContactSection/>*/}
             </main>
 
