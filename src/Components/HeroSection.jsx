@@ -1,4 +1,4 @@
-import {ArrowDown} from "lucide-react";
+import {ArrowDown, Linkedin, Github} from "lucide-react";
 
 export const HeroSection = () => {
     return (
@@ -21,10 +21,16 @@ export const HeroSection = () => {
                             focused, and enthusiastic to contribute to graphic programming
                             projects in dynamic and collaborative settings.
                         </p>
-                        <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                            <a href="#projects" className="cosmic-button">
-                                View My Work
-                            </a>
+                        <div className="pt-8">
+                            <h4 className="font-medium mb-4">Connect With Me</h4>
+                            <div className="flex space-x-4 justify-center">
+                                <a href="https://www.linkedin.com/in/manuel-pepe/" target="_blank">
+                                    <Linkedin/>
+                                </a>
+                                <a href="https://github.com/ManuelPepe129" target="_blank">
+                                    <Github/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="verflow-hidden opacity-0 animate-fade-in-delay-4">
