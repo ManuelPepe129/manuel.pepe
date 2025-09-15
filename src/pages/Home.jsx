@@ -9,6 +9,7 @@ import {ContactSection} from "@/Components/ContactSection.jsx";
 import {FooterComponent} from "@/Components/Footer.jsx";
 import {PersonalProjectsSection} from "@/Components/PersonalProjectsSection.jsx";
 import {EducationSection} from "@/Components/EducationSection.jsx";
+import {ProfessionalSection} from "../Components/ProfessionalSection.jsx";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
                 {/*<SkillsSection/>*/}
                 <ProjectsSection/>
                 <PersonalProjectsSection/>
+                <ProfessionalSection/>
                 <EducationSection/>
                 {/*<ContactSection/>*/}
             </main>
